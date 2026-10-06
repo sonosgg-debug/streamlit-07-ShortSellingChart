@@ -1,5 +1,3 @@
-import socket
-socket.setdefaulttimeout(5.0)
 
 import streamlit as st
 import datetime
@@ -29,7 +27,6 @@ STANDARD_CHART_THEME = {
     'hover_bg': 'rgba(15, 23, 42, 0.9)',
     'hover_border': '#334155'
 }
-
 
 # .env 파일 로드
 load_dotenv()
@@ -248,7 +245,6 @@ st.markdown("""
 
 </style>
 """, unsafe_allow_html=True)
-
 
 # -----------------------------------------------------------------------------
 # 1. 날짜 연산 함수
@@ -537,7 +533,6 @@ def fetch_and_process_data(start_date, end_date, ticker):
 st.markdown("<h1 class='main-title' style='text-align: center; font-size: 2.0rem !important; font-weight: 800 !important; color: #8AB4F8 !important; -webkit-text-fill-color: #8AB4F8 !important; margin-bottom: 10px;'><span style='color: #8AB4F8 !important; -webkit-text-fill-color: #8AB4F8 !important;'>한국증시 개별종목 공매도 현황</span></h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: #BDC1C6; font-size: 1.0rem; margin-bottom: 20px;'>KRX 거래소 계정 정보를 이용하여 개별 종목의 공매도 순보유잔고와 주가 추이를 분석합니다.</p>", unsafe_allow_html=True)
 st.markdown("<hr style='border: 0; height: 1px; background-color: #334155; margin-bottom: 22px;'>", unsafe_allow_html=True)
-
 
 # 사이드바 설정
 with st.sidebar:
